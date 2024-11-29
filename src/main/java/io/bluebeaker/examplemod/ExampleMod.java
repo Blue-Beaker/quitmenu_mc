@@ -2,6 +2,7 @@ package io.bluebeaker.examplemod;
 
 import org.apache.logging.log4j.Logger;
 
+import io.bluebeaker.examplemod.Tags;
 import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.ConfigManager;
@@ -13,12 +14,12 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Mod(modid = ExampleMod.MODID, name = ExampleMod.NAME, version = ExampleMod.VERSION)
+@Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION)
 public class ExampleMod
 {
-    public static final String MODID = "examplemod";
-    public static final String NAME = "ExampleMod";
-    public static final String VERSION = "1.0";
+    public static final String MODID = Tags.MOD_ID;
+    public static final String NAME = Tags.MOD_NAME;
+    public static final String VERSION = Tags.VERSION;
     
     public MinecraftServer server;
 

@@ -45,7 +45,7 @@ public class ExampleMod
         }
     }
 
-    public void logInfo(String log){
-        logger.info(log);
+    public static Logger getLogger(){
+        return logger;
     }
 }

@@ -7,7 +7,11 @@ import net.minecraftforge.common.config.Config.Type;
 
 @Config(modid = QuitMenu.MODID,type = Type.INSTANCE,category = "general")
 public class QuitMenuConfig {
-    @Comment("Example")
-    @LangKey("config.quitmenu.example.name")
-    public static boolean example = true;
+    @Comment("Enable the mod")
+    @LangKey("config.quitmenu.enable.name")
+    public static boolean enable = true;
+
+    @Comment("Swap yes and no buttons placement in the quit menu.")
+    @LangKey("config.quitmenu.swapButtons.name")
+    public static boolean swapButtons = false;
 }

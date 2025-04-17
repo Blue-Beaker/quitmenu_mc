@@ -1,1 +1,5 @@
-config.quitmenu.example.name=Example
+quitmenuScreen.title=Do you really want to quit?
+quitmenuScreen.cancel=No
+quitmenuScreen.confirm=Yes
+config.quitmenu.enable.name=Enable
+config.quitmenu.swapButtons.name=Swap buttons placement

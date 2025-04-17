@@ -1,0 +1,5 @@
+quitmenuScreen.title=确定要退出吗?
+quitmenuScreen.cancel=否
+quitmenuScreen.confirm=是
+config.quitmenu.enable.name=启用
+config.quitmenu.swapButtons.name=交换按钮位置

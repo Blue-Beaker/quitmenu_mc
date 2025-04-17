@@ -8,11 +8,11 @@ import javax.annotation.Nullable;
 
 import net.minecraftforge.common.ForgeVersion;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
-import zone.rong.mixinbooter.ILateMixinLoader;
+import zone.rong.mixinbooter.IEarlyMixinLoader;
 
 @IFMLLoadingPlugin.Name("quitmenu")
 @IFMLLoadingPlugin.MCVersion(ForgeVersion.mcVersion)
-public class QuitMenuMixins implements IFMLLoadingPlugin, ILateMixinLoader {
+public class QuitMenuMixins implements IFMLLoadingPlugin, IEarlyMixinLoader {
 
     @Override
     public List<String> getMixinConfigs() {

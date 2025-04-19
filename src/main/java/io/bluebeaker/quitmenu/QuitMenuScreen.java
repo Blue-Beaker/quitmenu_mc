@@ -6,6 +6,7 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
+import net.minecraftforge.fml.client.config.GuiButtonExt;
 
 import javax.annotation.Nullable;
 import java.io.IOException;
@@ -22,7 +23,7 @@ public class QuitMenuScreen extends GuiScreen {
         this.drawDefaultBackground();
         GlStateManager.pushMatrix();
         GlStateManager.scale(2.0F, 2.0F, 2.0F);
-        this.drawCenteredString(this.fontRenderer, I18n.format("quitmenuScreen.title"), this.width / 2 / 2, 30, 16777215);
+        this.drawCenteredString(this.fontRenderer, I18n.format("quitmenuScreen.title"), this.width / 2 / 2, Math.min(30, this.height/2-30), 16777215);
         GlStateManager.popMatrix();
         super.drawScreen(mouseX, mouseY, partialTicks);
     }
@@ -41,16 +42,16 @@ public class QuitMenuScreen extends GuiScreen {
         int x1;
         int x2;
         int buttonY = this.height - 40;
-        int buttonWidth=this.width/2-40;
+        int buttonWidth= this.width/2-40;
         if(!QuitMenuConfig.swapButtons){
             x1=this.width / 2 + 5;
-            x2=35;
+            x2=this.width / 2 -buttonWidth-5;
         } else{
             x2=this.width / 2 + 5;
-            x1=35;
+            x1=this.width / 2 -buttonWidth-5;
         }
 
-        this.addButton(new GuiButton(0, x1, buttonY, buttonWidth, 20, I18n.format("quitmenuScreen.cancel")));
-        this.addButton(new GuiButton(1, x2, buttonY, buttonWidth, 20, I18n.format("quitmenuScreen.confirm")));
+        this.addButton(new GuiButtonExt(0, x1, buttonY, buttonWidth, 20, I18n.format("quitmenuScreen.cancel")));
+        this.addButton(new GuiButtonExt(1, x2, buttonY, buttonWidth, 20, I18n.format("quitmenuScreen.confirm")));
     }
 }
